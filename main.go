@@ -12,7 +12,7 @@ func webGetWorker(in <-chan []byte, grt int, wg *sync.WaitGroup) {
 		if url == "" {
 			continue
 		}
-		fmt.Printf("GRT: %d getting url: %s \n", grt, url)
+		fmt.Printf("GoRoutine #%d getting data from url: %s \n", grt, url)
 
 		res, err := http.Get(url)
 
